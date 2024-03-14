@@ -1,0 +1,1144 @@
+Program.Sub.ScreenSU.Start
+Gui.frmMaint..Create(BaseForm)
+Gui.frmMaint..Caption("Maintenance Screen")
+Gui.frmMaint..Size(6720,8955)
+Gui.frmMaint..MinX(0)
+Gui.frmMaint..MinY(0)
+Gui.frmMaint..Position(0,0)
+Gui.frmMaint..BackColor(-2147483633)
+Gui.frmMaint..MaxButton(False)
+Gui.frmMaint..MinButton(False)
+Gui.frmMaint..MousePointer(0)
+Gui.frmMaint..Event(UnLoad,frmMaint_UnLoad)
+Gui.frmMaint..AlwaysOnTop(False)
+Gui.frmMaint..FontName("Tahoma")
+Gui.frmMaint..FontSize(8.25)
+Gui.frmMaint..ControlBox(True)
+Gui.frmMaint..Moveable(True)
+Gui.frmMaint..Sizeable(True)
+Gui.frmMaint..ShowInTaskBar(True)
+Gui.frmMaint..TitleBar(True)
+Gui.frmMaint.lbl1.Create(Label,"Incoming Email Folder",True,1545,210,0,165,975,True,0,"Arial",8,-2147483633,0,0)
+Gui.frmMaint.lbl1.BorderStyle(0)
+Gui.frmMaint.txtInboxSubfolder.Create(TextBox,"",True,4545,300,0,165,1230,True,0,"Arial",8,-2147483643,1)
+Gui.frmMaint.txtInboxSubfolder.TabStop(True)
+Gui.frmMaint.txtInboxSubfolder.TabIndex(2)
+Gui.frmMaint.lbl2.Create(Label,"CSR Action Log Threshold (days)",True,2430,210,0,165,2505,True,0,"Arial",8,-2147483633,0,0)
+Gui.frmMaint.lbl2.BorderStyle(0)
+Gui.frmMaint.lbl3.Create(Label,"Attachment Document Group",True,2085,210,0,165,3975,True,0,"Arial",8,-2147483633,0,0)
+Gui.frmMaint.lbl3.BorderStyle(0)
+Gui.frmMaint.ddldocType.Create(DropDownList)
+Gui.frmMaint.ddldocType.Size(4545,300)
+Gui.frmMaint.ddldocType.Position(165,4230)
+Gui.frmMaint.ddldocType.TabStop(True)
+Gui.frmMaint.ddldocType.TabIndex(6)
+Gui.frmMaint.ddldocType.Enabled(True)
+Gui.frmMaint.ddldocType.Visible(True)
+Gui.frmMaint.ddldocType.Zorder(0)
+Gui.frmMaint.ddldocType.FontName("Tahoma")
+Gui.frmMaint.ddldocType.FontSize(8.25)
+Gui.frmMaint.lbl4.Create(Label,"Document Folder (save attachments)",True,2670,210,0,165,4710,True,0,"Arial",8,-2147483633,0,0)
+Gui.frmMaint.lbl4.BorderStyle(0)
+Gui.frmMaint.txtdocfolder.Create(TextBox,"",True,4665,300,0,165,4965,True,0,"Arial",8,-2147483643,1)
+Gui.frmMaint.txtdocfolder.TabStop(True)
+Gui.frmMaint.txtdocfolder.TabIndex(7)
+Gui.frmMaint.txtEmailBody.Create(TextboxM)
+Gui.frmMaint.txtEmailBody.Size(4680,2040)
+Gui.frmMaint.txtEmailBody.Position(165,5685)
+Gui.frmMaint.txtEmailBody.TabStop(True)
+Gui.frmMaint.txtEmailBody.TabIndex(8)
+Gui.frmMaint.txtEmailBody.Enabled(True)
+Gui.frmMaint.txtEmailBody.Visible(True)
+Gui.frmMaint.txtEmailBody.Zorder(0)
+Gui.frmMaint.txtEmailBody.FontName("Tahoma")
+Gui.frmMaint.txtEmailBody.FontSize(8.25)
+Gui.frmMaint.lbl5.Create(Label,"Default Email Body (Auto response)",True,2580,210,0,165,5430,True,0,"Arial",8,-2147483633,0,0)
+Gui.frmMaint.lbl5.BorderStyle(0)
+Gui.frmMaint.cmdSave.Create(Button)
+Gui.frmMaint.cmdSave.Size(1245,345)
+Gui.frmMaint.cmdSave.Position(5295,90)
+Gui.frmMaint.cmdSave.Caption("&Save")
+Gui.frmMaint.cmdSave.Event(Click,cmdSave_Click)
+Gui.frmMaint.cmdSave.TabStop(True)
+Gui.frmMaint.cmdSave.TabIndex(22)
+Gui.frmMaint.cmdSave.Enabled(True)
+Gui.frmMaint.cmdSave.Visible(True)
+Gui.frmMaint.cmdSave.Zorder(0)
+Gui.frmMaint.cmdSave.FontName("Tahoma")
+Gui.frmMaint.cmdSave.FontSize(8.25)
+Gui.frmMaint.lbl6.Create(Label,"CSR Email",True,720,210,0,165,240,True,0,"Arial",8,-2147483633,0,0)
+Gui.frmMaint.lbl6.BorderStyle(0)
+Gui.frmMaint.txtCSREmail.Create(TextBox,"",True,4500,300,0,165,495,True,0,"Arial",8,-2147483643,1)
+Gui.frmMaint.txtCSREmail.TabStop(True)
+Gui.frmMaint.txtCSREmail.TabIndex(1)
+Gui.frmMaint.lbl7.Create(Label,"Processed Email Folder",True,1695,210,0,165,1740,True,0,"Arial",8,-2147483633,0,0)
+Gui.frmMaint.lbl7.BorderStyle(0)
+Gui.frmMaint.txtProcessed.Create(TextBox,"",True,4575,300,0,165,1980,True,0,"Arial",8,-2147483643,1)
+Gui.frmMaint.txtProcessed.TabStop(True)
+Gui.frmMaint.txtProcessed.TabIndex(3)
+Gui.frmMaint.lbl8.Create(Label,"Default CSR Type",True,1275,210,0,165,3255,True,0,"Arial",8,-2147483633,0,0)
+Gui.frmMaint.lbl8.BorderStyle(0)
+Gui.frmMaint.ddlCSRType.Create(DropDownList)
+Gui.frmMaint.ddlCSRType.Size(4545,300)
+Gui.frmMaint.ddlCSRType.Position(165,3555)
+Gui.frmMaint.ddlCSRType.TabStop(True)
+Gui.frmMaint.ddlCSRType.TabIndex(5)
+Gui.frmMaint.ddlCSRType.Enabled(True)
+Gui.frmMaint.ddlCSRType.Visible(True)
+Gui.frmMaint.ddlCSRType.Zorder(0)
+Gui.frmMaint.ddlCSRType.FontName("Tahoma")
+Gui.frmMaint.ddlCSRType.FontSize(8.25)
+Gui.frmMaint.txtCSRlogdays.Create(TextBox,"",True,945,300,0,165,2760,True,0,"Tahoma",8.25,,1)
+Gui.frmMaint.txtCSRlogdays.TabStop(True)
+Gui.frmMaint.txtCSRlogdays.TabIndex(4)
+Gui.frmMaint.cmdOpenErrorLog.Create(Button)
+Gui.frmMaint.cmdOpenErrorLog.Enabled(True)
+Gui.frmMaint.cmdOpenErrorLog.Visible(True)
+Gui.frmMaint.cmdOpenErrorLog.Zorder(0)
+Gui.frmMaint.cmdOpenErrorLog.Size(1215,345)
+Gui.frmMaint.cmdOpenErrorLog.Position(5325,525)
+Gui.frmMaint.cmdOpenErrorLog.Caption("Open ErrorLog")
+Gui.frmMaint.cmdOpenErrorLog.FontName("Tahoma")
+Gui.frmMaint.cmdOpenErrorLog.FontSize(8.25)
+Gui.frmMaint.cmdOpenErrorLog.Event(Click,cmdOpenErrorLog_Click)
+Gui.frmMaint.lbl9.Create(Label,"Phantom MW  - Customer",True,1830,195,0,195,7845,True,0,"Tahoma",8.25,,0,0)
+Gui.frmMaint.lbl9.BorderStyle(0)
+Gui.frmMaint.txtCust.Create(TextBox,"",True,1875,300,0,180,8100,True,0,"Tahoma",8.25,,1)
+Gui.frmMaint.txtCust.Locked(True)
+Gui.frmMaint.cmdCustBrowse.Create(Button)
+Gui.frmMaint.cmdCustBrowse.Enabled(True)
+Gui.frmMaint.cmdCustBrowse.Visible(True)
+Gui.frmMaint.cmdCustBrowse.Zorder(0)
+Gui.frmMaint.cmdCustBrowse.Size(450,315)
+Gui.frmMaint.cmdCustBrowse.Position(2115,8085)
+Gui.frmMaint.cmdCustBrowse.Caption("^")
+Gui.frmMaint.cmdCustBrowse.FontName("Tahoma")
+Gui.frmMaint.cmdCustBrowse.FontSize(8.25)
+Gui.frmMaint.cmdCustBrowse.Event(Click,cmdCustBrowse_Click)
+Gui.frmMaint.cmdInbox_Browse.Create(Button)
+Gui.frmMaint.cmdInbox_Browse.Enabled(True)
+Gui.frmMaint.cmdInbox_Browse.Visible(True)
+Gui.frmMaint.cmdInbox_Browse.Zorder(0)
+Gui.frmMaint.cmdInbox_Browse.Size(480,300)
+Gui.frmMaint.cmdInbox_Browse.Position(4755,1230)
+Gui.frmMaint.cmdInbox_Browse.Caption("^")
+Gui.frmMaint.cmdInbox_Browse.FontName("Tahoma")
+Gui.frmMaint.cmdInbox_Browse.FontSize(8.25)
+Gui.frmMaint.cmdInbox_Browse.Event(Click,cmdInbox_Browse_Click)
+Gui.frmMaint.cmdPrcessed_Browse.Create(Button)
+Gui.frmMaint.cmdPrcessed_Browse.Enabled(True)
+Gui.frmMaint.cmdPrcessed_Browse.Visible(True)
+Gui.frmMaint.cmdPrcessed_Browse.Zorder(0)
+Gui.frmMaint.cmdPrcessed_Browse.Size(450,300)
+Gui.frmMaint.cmdPrcessed_Browse.Position(4785,1980)
+Gui.frmMaint.cmdPrcessed_Browse.Caption("^")
+Gui.frmMaint.cmdPrcessed_Browse.FontName("Tahoma")
+Gui.frmMaint.cmdPrcessed_Browse.FontSize(8.25)
+Gui.frmMaint.cmdPrcessed_Browse.Event(Click,cmdPrcessed_Browse_Click)
+Gui.frmSRV..Create(BaseForm)
+Gui.frmSRV..Caption("Service Notes")
+Gui.frmSRV..Size(19020,12105)
+Gui.frmSRV..MinX(0)
+Gui.frmSRV..MinY(0)
+Gui.frmSRV..Position(0,0)
+Gui.frmSRV..AlwaysOnTop(False)
+Gui.frmSRV..FontName("Tahoma")
+Gui.frmSRV..FontSize(8.25)
+Gui.frmSRV..ControlBox(True)
+Gui.frmSRV..MaxButton(False)
+Gui.frmSRV..MinButton(True)
+Gui.frmSRV..MousePointer(0)
+Gui.frmSRV..Moveable(True)
+Gui.frmSRV..Sizeable(True)
+Gui.frmSRV..ShowInTaskBar(True)
+Gui.frmSRV..TitleBar(True)
+Gui.frmSRV..Event(UnLoad,frmSRV_UnLoad)
+Gui.frmSRV.GsGrid.Create(GsGridControl)
+Gui.frmSRV.GsGrid.Enabled(True)
+Gui.frmSRV.GsGrid.Visible(True)
+Gui.frmSRV.GsGrid.Zorder(0)
+Gui.frmSRV.GsGrid.Size(18630,10845)
+Gui.frmSRV.GsGrid.Position(105,510)
+Gui.frmSRV.cmdEmail.Create(Button)
+Gui.frmSRV.cmdEmail.Enabled(True)
+Gui.frmSRV.cmdEmail.Visible(True)
+Gui.frmSRV.cmdEmail.Zorder(0)
+Gui.frmSRV.cmdEmail.Size(1110,345)
+Gui.frmSRV.cmdEmail.Position(15960,105)
+Gui.frmSRV.cmdEmail.Caption("Email")
+Gui.frmSRV.cmdEmail.FontName("Tahoma")
+Gui.frmSRV.cmdEmail.FontSize(8.25)
+Gui.frmSRV.cmdEmail.Event(Click,cmdEmail_Click)
+Gui.frmSRV.cmdclipboard.Create(Button)
+Gui.frmSRV.cmdclipboard.Enabled(True)
+Gui.frmSRV.cmdclipboard.Visible(True)
+Gui.frmSRV.cmdclipboard.Zorder(0)
+Gui.frmSRV.cmdclipboard.Size(1560,345)
+Gui.frmSRV.cmdclipboard.Position(17235,120)
+Gui.frmSRV.cmdclipboard.Caption("Copy to Clipboard")
+Gui.frmSRV.cmdclipboard.FontName("Tahoma")
+Gui.frmSRV.cmdclipboard.FontSize(8.25)
+Gui.frmSRV.cmdclipboard.Event(Click,cmdclipboard_Click)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+Program.Sub.Preflight.End
+Program.Sub.Main.Start
+f.Intrinsic.Control.Try
+'Developed by Ranjit
+'Customer - Miller WeldMaster
+v.Local.sRet.Declare
+v.Global.sPIDFile.Declare
+v.Local.sEmailBody.Declare
+V.Local.sCRLF.Declare
+V.Local.sfile.Declare
+
+
+
+'f.Intrinsic.Control.If(v.Caller.Hook,=,51012)	
+'	f.Intrinsic.UI.Msgbox("populate")
+
+''	F.Intrinsic.Debug.DUMPOUTPUTHOOKFILE
+'	F.Intrinsic.String.Build("{0}\WEB_ORDERS\{1}RAN.txt",V.Caller.FilesDir,V.Caller.CompanyCode,V.Local.sfile)
+'	F.Intrinsic.String.Build("{0}\WEB_ORDERS\0000095.txt",V.Caller.FilesDir,V.Caller.CompanyCode,V.Local.sfile)
+''	F.Intrinsic.File.String2File(V.Local.sfile,Variable.Passed.CRM-txtSRProblem)
+'	
+'	F.Intrinsic.File.File2String(V.Local.sfile,V.Local.sEmailBody)
+'	Variable.Passed.CRM-txtSRProblem.Set(V.Local.sEmailBody)
+'	
+'	'-----------------------
+''	F.Intrinsic.String.Build("{0}\WEB_ORDERS\0000095.txt",V.Caller.FilesDir,V.Caller.CompanyCode,V.Local.sfile)
+''	F.Intrinsic.File.File2String(V.Local.sfile,V.Local.sEmailBody)
+''	Variable.Passed.CRM-txtSRProblem.Set(V.Local.sEmailBody)
+'f.Intrinsic.Control.end			
+'			
+'	'1
+''	F.Intrinsic.String.Build("{0} Subroutine:{1}{2}{3} Error Occurred",v.Ambient.Now,v.ASCII.13,v.ASCII.10,V.Ambient.CurrentSubroutine,V.Local.sEmailBody)
+'	'2
+''	F.Intrinsic.String.Build("{0} Subroutine:{1}{1}{2} Error Occurred",v.Ambient.Now,v.Ambient.NewLine,V.Ambient.CurrentSubroutine,V.Local.sEmailBody)
+''F.Intrinsic.String.Build("{0} SubroutineError{1}{2}Occurred",v.Ambient.Now,v.ASCII.12,v.Ambient.NewLine,V.Ambient.CurrentSubroutine,V.Local.sEmailBody)
+''	'3
+''	v.Local.sRet.Set("<br />")
+''	F.Intrinsic.String.Build("{0} Subroutine:{1}{2} Error Occurred",v.Ambient.Now,v.Local.sRet,V.Ambient.CurrentSubroutine,V.Local.sEmailBody)
+
+''	'4
+''	v.Local.sRet.Set("\r\n")
+''	v.Local.sRet.Set("\n")
+''	F.Intrinsic.String.Build("{0} Subroutine:{1} {2} Error Occurred",v.Ambient.Now,v.Local.sRet,V.Ambient.CurrentSubroutine,V.Local.sEmailBody)
+'F.Intrinsic.Debug.DUMPOUTPUTHOOKFILE
+'F.Intrinsic.String.Build("{0} SubroutineError{1}{2}Occurred",v.Ambient.Now,v.Ambient.NewLine,V.Ambient.CurrentSubroutine,V.Local.sEmailBody)
+''F.Intrinsic.String.Build("{0} SubroutineError{1}{2}Occurred",v.Ambient.Now,v.Ambient.Tab,V.Ambient.CurrentSubroutine,V.Local.sEmailBody)
+
+'	f.Intrinsic.String.Replace(V.Local.sEmailBody,"<CrLF>",Environment.NewLine,V.Local.sEmailBody)
+'	Variable.Passed.CRM-txtSRProblem.Set(V.Local.sEmailBody)
+'f.Intrinsic.Control.endif
+
+'f.Intrinsic.Control.end
+'v.Local.bRet.Declare
+
+'f.Intrinsic.Control.CallSub(LoadServiceRequest)
+'v.Local.sPID.Declare(String)
+
+'v.Local.lRet.Declare
+'v.Local.sEmailBody.Declare
+'v.Local.sSQL.Declare
+
+'F.ODBC.Connection!conx.OpenCompanyConnection(300)
+'f.Intrinsic.File.File2String("C:\Apps\Global\Custom\5857\BODY\0000095.txt",v.Local.sEmailBody)
+''f.Intrinsic.String.Len(v.Local.sEmailBody,v.Local.lRet)
+''f.Intrinsic.Control.If(v.Local.lRet,<,3200)
+'f.Intrinsic.Control.Try
+'	F.Intrinsic.String.Replace(v.Local.sEmailBody,"'","''",v.Local.sEmailBody)
+'	f.Intrinsic.String.Build("Insert Into CUST_SVC_RQ_NOTES Values('{0}','P','{1}','{2}','{3}','{4}')","0000094",v.Ambient.Date,v.Ambient.Time,v.Caller.User,v.Local.sEmailBody,v.Local.sSQL)
+'	f.ODBC.Connection!conx.execute(v.Local.sSQL)
+''f.Intrinsic.Control.endif
+'f.Intrinsic.Control.Catch
+'		f.Intrinsic.UI.Msgbox(v.Ambient.ErrorNumber)
+'		f.Intrinsic.File.String2File("C:\Apps\Global\Custom\5857\BODY\err.txt",v.Ambient.ErrorDescription)
+'f.Intrinsic.Control.EndTry
+'f.Intrinsic.Control.exitsub
+
+'f.Intrinsic.Task.PIDRunning(v.Ambient.PID,v.Local.bRet)
+'f.Intrinsic.Task.TerminatePID(2323)
+f.Intrinsic.Control.If(v.Caller.Switches,=,"E")
+    F.ODBC.Connection!conx.OpenCompanyConnection(300)
+    f.Intrinsic.Control.CallSub(isRunning)
+	f.Intrinsic.Control.CallSub(Load_Data)
+	f.Intrinsic.File.DeleteFile(v.Global.sPIDFile)
+	f.Intrinsic.Control.CallSub(frmMaint_UnLoad)
+f.Intrinsic.Control.elseIf(v.Caller.Hook,=,51000)
+	Variable.Passed.CRM-TSB_GAB-1.Set("Email")
+f.Intrinsic.Control.elseIf(v.Caller.Hook,=,51012)
+'Populate Service Request
+	'Variable.Passed.CRM-TSB_GAB-1.Set("Email")
+	f.Intrinsic.Control.CallSub(EmailText,"Mode","READ","CSRNO",Variable.Passed.CRM-txtSRNo)
+f.Intrinsic.Control.elseIf(v.Caller.Hook,=,51086)
+'script6 CRM
+	f.Intrinsic.Control.If(Variable.Passed.CRM-txtSRNo.Trim,<>,"")
+		f.Intrinsic.Control.CallSub(LoadServiceRequest)
+		gui.frmSRV.GsGrid.Anchor(7)
+		gui.frmSRV..Show
+	f.Intrinsic.Control.endif
+f.Intrinsic.Control.elseIf(v.Caller.Hook,=,38120)
+
+'(online update
+	'check to see if script is running already. 
+    F.ODBC.Connection!conx.OpenCompanyConnection(300)
+    f.Intrinsic.Control.CallSub(isRunning)
+	f.Intrinsic.Control.CallSub(Load_Data)
+	f.Intrinsic.File.DeleteFile(v.Global.sPIDFile)
+	f.Intrinsic.Control.CallSub(frmMaint_UnLoad)
+f.Intrinsic.Control.ElseIf(v.Caller.Hook,=,51029)
+'SAVE HOOK CRM SERVICE REQUEST
+'	f.Intrinsic.Control.CallSub(ACK_Email,"EmailMode","ACK")
+'remove later
+	v.Local.sRet.Set("1")
+	'check if long email file exist
+	f.Intrinsic.Control.CallSub(EmailText,"Mode","SAVE","CSRNO",Variable.Passed.CRM-txtSRNo)
+f.Intrinsic.Control.ElseIf(v.Caller.Switches.Trim,=,"M")
+	F.ODBC.Connection!conx.OpenCompanyConnection(300)
+	f.Intrinsic.Control.CallSub(Load_Maint)
+	gui.frmMaint..Show
+f.Intrinsic.Control.Else
+	F.ODBC.Connection!conx.OpenCompanyConnection(300)
+	f.Intrinsic.Control.CallSub(Load_Data)
+	f.Intrinsic.Control.CallSub(frmMaint_UnLoad)
+f.Intrinsic.Control.endif
+
+
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+	f.Intrinsic.Control.EndTry
+Program.Sub.Main.End
+Program.Sub.cmdSave_Click.Start
+f.Intrinsic.Control.Try
+'save data
+v.Local.bret.Declare
+v.Local.sdocpath.Declare
+v.Local.lRet.Declare
+v.Local.lLen.Declare
+
+f.Intrinsic.Control.If(v.Screen.frmMaint!txtCSREmail.text,=,"")
+	f.Intrinsic.UI.Msgbox("Invalid Data")
+	gui.frmMaint.txtCSREmail.SetFocus
+	f.Intrinsic.Control.ExitSub
+f.Intrinsic.Control.elseIf(v.Screen.frmMaint!txtInboxSubfolder.text,=,"")
+	f.Intrinsic.UI.Msgbox("Invalid Data")
+	gui.frmMaint.txtInboxSubfolder.SetFocus
+	f.Intrinsic.Control.ExitSub
+f.Intrinsic.Control.elseIf(v.Screen.frmMaint!txtProcessed.text,=,"")
+	f.Intrinsic.UI.Msgbox("Invalid Data")
+	gui.frmMaint.txtProcessed.SetFocus
+	f.Intrinsic.Control.ExitSub
+f.Intrinsic.Control.elseIf(v.Screen.frmMaint!txtCSRlogdays.text,=,"")
+	f.Intrinsic.UI.Msgbox("Invalid Data")
+	gui.frmMaint.txtCSRlogdays.SetFocus
+	f.Intrinsic.Control.ExitSub
+f.Intrinsic.Control.elseIf(v.Screen.frmMaint!ddlCSRType.text,=,"")
+	f.Intrinsic.UI.Msgbox("Invalid Data")
+	gui.frmMaint.ddlCSRType.SetFocus
+	f.Intrinsic.Control.ExitSub
+f.Intrinsic.Control.elseIf(v.Screen.frmMaint!txtdocfolder.text,=,"")
+	f.Intrinsic.UI.Msgbox("Invalid Data")
+	gui.frmMaint.txtdocfolder.SetFocus
+	f.Intrinsic.Control.ExitSub
+f.Intrinsic.Control.elseIf(v.Screen.frmMaint!ddldocType.text,=,"")
+	f.Intrinsic.UI.Msgbox("Invalid Data")
+	gui.frmMaint.ddldocType.SetFocus
+	f.Intrinsic.Control.ExitSub
+f.Intrinsic.Control.elseIf(v.Screen.frmMaint!txtEmailBody.text,=,"")
+	f.Intrinsic.UI.Msgbox("Invalid Data")
+	gui.frmMaint.txtEmailBody.SetFocus
+	f.Intrinsic.Control.ExitSub
+f.Intrinsic.Control.elseIf(v.Screen.frmMaint!txtCust.text,=,"")
+	f.Intrinsic.UI.Msgbox("Invalid Data")
+	gui.frmMaint.txtCust.SetFocus
+	f.Intrinsic.Control.ExitSub
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.File.PathExists(v.Screen.frmMaint!txtdocfolder.text,v.Local.bret)
+f.Intrinsic.Control.If(v.Local.bret,=,False)
+	f.Intrinsic.UI.Msgbox("Invalid Path")
+	gui.frmMaint.txtdocfolder.SetFocus
+	f.Intrinsic.Control.ExitSub
+f.Intrinsic.Control.Else
+	'check for folder format. add "\"
+	f.Intrinsic.String.InstrRev(v.Screen.frmMaint!txtdocfolder.text,"\",v.Local.lRet)
+	f.Intrinsic.String.Len(v.Screen.frmMaint!txtdocfolder.text,v.Local.lLen)
+	f.Intrinsic.Control.If(v.Local.lRet,<>,v.Local.lLen)
+		f.Intrinsic.String.Build("{0}\",v.Screen.frmMaint!txtdocfolder.text,v.Local.sdocpath)
+	f.Intrinsic.Control.Else
+		v.Local.sdocpath.Set(v.Screen.frmMaint!txtdocfolder.text)
+	f.Intrinsic.Control.endif
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.If(v.DataTable.DTMaint.RowCount,>,0)
+	f.Data.Datatable.SetValue("DTMaint",0,"CSR_Email",v.Screen.frmMaint!txtCSREmail.text)
+	f.Data.Datatable.SetValue("DTMaint",0,"CSR_Type",v.Screen.frmMaint!ddlCSRType.text)
+	f.Data.Datatable.SetValue("DTMaint",0,"Doc_Path",v.Local.sdocpath)
+	f.Data.Datatable.SetValue("DTMaint",0,"Processed_Folder",v.Screen.frmMaint!txtProcessed.text)
+	f.Data.Datatable.SetValue("DTMaint",0,"Email_Body",v.Screen.frmMaint!txtEmailBody.text)
+	f.Data.Datatable.SetValue("DTMaint",0,"Inbox_Name",v.Screen.frmMaint!txtInboxSubfolder.text)
+	f.Data.Datatable.SetValue("DTMaint",0,"CSR_Logdays",v.Screen.frmMaint!txtCSRlogdays.text)
+	f.Data.Datatable.SetValue("DTMaint",0,"Doc_Type",v.Screen.frmMaint!ddldocType.text)
+	f.Data.Datatable.SetValue("DTMaint",0,"Cust",v.Screen.frmMaint!txtCust.text)
+f.Intrinsic.Control.Else
+	f.Data.DataTable.AddRow("DTMaint","CSR_Email",v.Screen.frmMaint!txtCSREmail.text,"CSR_Type",v.Screen.frmMaint!ddlCSRType.Text,"Doc_Path",v.Local.sdocpath,"Processed_Folder",v.Screen.frmMaint!txtProcessed.Text,"Email_Body",v.Screen.frmMaint!txtEmailBody.Text,"Inbox_Name",v.Screen.frmMaint!txtInboxSubfolder.text,"CSR_Logdays",v.Screen.frmMaint!txtCSRlogdays.text,"Doc_Type",v.Screen.frmMaint!ddldocType.text,"Cust",v.Screen.frmMaint!txtCust.text)
+f.Intrinsic.Control.EndIf
+
+
+f.ODBC.Connection!conx.execute("delete from GCG_5857_Maint")
+F.Data.DataTable.SaveToDB("DTMaint","conx","GCG_5857_Maint","CSR_Email",256)
+f.Intrinsic.UI.Msgbox("Setting saved successfuly")
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+	f.Intrinsic.Control.EndTry
+Program.Sub.cmdSave_Click.End
+
+Program.Sub.frmMaint_UnLoad.Start
+f.Intrinsic.Control.Try
+
+
+	f.Intrinsic.Control.If(v.DataTable.DTData.Exists,=,True)
+		f.Data.DataTable.Close("DTMaint")
+	f.Intrinsic.Control.EndIf
+	
+	f.ODBC.Connection!conx.Close
+	f.Intrinsic.Control.End
+	
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+	f.Intrinsic.Control.EndTry
+Program.Sub.frmMaint_UnLoad.End
+
+Program.Sub.Load_Data.Start
+f.Intrinsic.Control.Try
+
+V.Local.sFieldNames.Declare
+V.Local.sTypes.Declare
+V.Local.sRet.Declare
+V.Local.i.Declare
+V.Local.sSubject.Declare
+V.Local.sSubjectSUB.Declare
+V.Local.sCSR_REF.Declare
+V.Local.sFromEmailID.Declare
+v.Local.BRet.Declare
+V.Local.sSQL.Declare
+V.Local.sInbox.Declare
+V.Local.sProcessed.Declare
+v.Local.sDate.Declare
+v.Local.sTime.Declare
+v.Local.dCALDate.Declare
+
+
+f.Intrinsic.Control.CallSub(CheckTable)
+'load Inbox to DT
+f.data.DataTable.createfromsql("DTType","conx","select rtrim(GRP_NAME) as GRP_NAME from ATG_DOC_GRP order by GRP_ID")
+	f.Data.DataTable.CreateFromSQL("DTMaint","CONX","select Inbox_Name,CSR_Email,CSR_Type,Processed_Folder,CSR_Logdays,Doc_Path,Doc_Type,Email_Body,GRP_ID,Cust from GCG_5857_Maint left Join ATG_DOC_GRP on rtrim(GRP_NAME) = Doc_Type ",true)
+	f.Intrinsic.Control.If(v.DataTable.DTMaint.RowCount,>,0)
+		V.Local.sInbox.Set(V.DataTable.DTMaint(0).Inbox_Name!FieldValtrim)
+		Function.Automation.MSOutlook.GetEmailListing(V.Local.sInbox,V.Local.sRet)
+		f.Intrinsic.Control.If(V.Local.sRet.Trim,<>,"")	
+			'Key*!*subject*!*date
+			V.Local.sFieldNames.Set("KeyID*!*subject*!*date*!*FromEmailID*!*EmailCC")
+			V.Local.sTypes.Set("String*!*String*!*String*!*String*!*String")
+		
+			'Reading from spreadsheet
+			F.Data.DataTable.CreateFromString("DTEmail",V.Local.sRet,V.Local.sFieldNames,V.Local.sTypes,"*!*","*%*",True)
+			F.Intrinsic.Control.For(V.Local.i,0,v.DataTable.DTEmail.RowCount--,1)
+		
+				V.Local.sFromEmailID.Set(V.DataTable.DTEmail(V.Local.i).FromEmailID!FieldVal)
+				V.Local.sSubject.Set(V.DataTable.DTEmail(V.Local.i).subject!FieldVal)
+				
+				f.Intrinsic.String.IsInString(V.Local.sSubject,"CSR#",True,v.Local.BRet)
+				f.Intrinsic.Control.If(v.Local.BRet,=,True)
+'					f.Intrinsic.String.Split(V.Local.sSubject,"CSR#",V.Local.sCSR_REF)
+					f.Intrinsic.String.Split(V.Local.sSubject,"#",V.Local.sCSR_REF)
+					'CHECK CSR Exist & NOTCLOSED
+					'ask silas abt CSRDate in maint screen
+					f.Intrinsic.String.Build("select * from V_CUST_SERV_REQ  where Request_Number = '{0}'",V.Local.sCSR_REF(1),V.Local.sSQL)
+					F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst",V.Local.sSql)
+					F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,=,False)	
+				'validate closedDate within Thrushold range
+						f.Intrinsic.Date.DateAddWorkdays(v.ODBC.conx!rst.FieldVal!date_closed,V.DataTable.DTMaint(0).CSR_Logdays!FieldVal,v.Local.dCALDate)
+						F.Intrinsic.Control.If(v.Local.dCALDate,>,v.Ambient.Date)	
+							f.Intrinsic.Control.CallSub(Generate_NEWCSR,"frmomemail",V.Local.sFromEmailID,"subject",V.Local.sSubject,"ReqType",V.DataTable.DTMaint(0).CSR_Type!FieldValtrim,"InboxFolder",V.Local.sInbox,"KEYID",V.DataTable.DTEmail(V.Local.i).KeyID!FieldVal)
+						f.Intrinsic.Control.Else
+						'CSR Exist
+							v.Local.sDate.Set(v.Ambient.Date.Formatyyyymmdd)
+							v.Local.sTime.Set(v.Ambient.Time.FormatHHNNSS)
+							
+							Function.Automation.MSOutlook.GetEmailBody(V.Local.sInbox,V.DataTable.DTEmail(V.Local.i).KeyID!FieldVal,v.Local.sRet)
+							
+							f.Intrinsic.String.Build("Insert Into CUST_SVC_RQ_NOTES Values('{0}','N','{1}','{2}','{3}','{4}')",V.Local.sCSR_REF(1),v.Local.sDate,v.Local.sTime,v.Caller.User,v.Local.sRet,v.Local.sSQL)
+							f.ODBC.Connection!conx.execute(v.Local.sSQL)
+							f.Intrinsic.Control.CallSub(Download_Attachment,"CSRNO",V.Local.sCSR_REF(1),"InboxFolder",V.Local.sInbox,"KEYID",V.DataTable.DTEmail(V.Local.i).KeyID!FieldVal)
+						f.Intrinsic.Control.endif
+					f.Intrinsic.Control.else
+						'New CSR
+						f.Intrinsic.Control.CallSub(Generate_NEWCSR,"frmomemail",V.Local.sFromEmailID,"subject",V.Local.sSubject,"ReqType",V.DataTable.DTMaint(0).CSR_Type!FieldValtrim,"InboxFolder",V.Local.sInbox,"KEYID",V.DataTable.DTEmail(V.Local.i).KeyID!FieldVal)
+					f.Intrinsic.Control.EndIf
+					F.ODBC.conx!rst.Close
+				f.Intrinsic.Control.Else
+					'New CSR
+					f.Intrinsic.Control.CallSub(Generate_NEWCSR,"frmomemail",V.Local.sFromEmailID,"subject",V.Local.sSubject,"ReqType",V.DataTable.DTMaint(0).CSR_Type!FieldValtrim,"InboxFolder",V.Local.sInbox,"KEYID",V.DataTable.DTEmail(V.Local.i).KeyID!FieldVal)
+				f.Intrinsic.Control.endif
+				'MoveEmail to Processed Folder
+	'			f.Intrinsic.String.Build("\\{0}\{1}",V.DataTable.DTMaint(0).CSR_Email!FieldValtrim,V.DataTable.DTMaint(0).Processed_Folder!FieldValtrim,V.Local.sProcessed)
+				V.Local.sProcessed.Set(V.DataTable.DTMaint(0).Processed_Folder!FieldValtrim)
+				Function.Automation.MSOutlook.MoveEmail(V.Local.sInbox,V.DataTable.DTEmail(V.Local.i).KeyID!FieldVal,V.Local.sProcessed) 
+			f.Intrinsic.Control.Next(V.Local.i)
+			f.Data.DataTable.Close("DTEmail")
+		f.Intrinsic.Control.endif
+	f.Intrinsic.Control.endif
+	f.Data.DataTable.Close("DTMaint")
+	
+	
+f.Intrinsic.Control.Catch
+	V.Local.sError.Declare
+	F.Intrinsic.String.Build("{0} Subroutine:{1} Error Occurred {2} with description {3}",v.Ambient.Now,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Local.sError)
+	f.Intrinsic.Control.CallSub(Error_Log,"ERRMSG",V.Local.sError)
+	f.Intrinsic.Control.EndTry
+Program.Sub.Load_Data.End
+
+Program.Sub.SaveAttachment.Start
+Program.Sub.Load_Data.Start
+f.Intrinsic.Control.Try
+
+f.Intrinsic.Control.Catch
+		f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+	f.Intrinsic.Control.EndTry
+Program.Sub.SaveAttachment.End
+
+Program.Sub.ACK_Email.Start
+f.Intrinsic.Control.Try
+
+v.Local.sSubject.Declare
+v.Local.bRET.Declare
+V.Local.sSql.Declare
+V.Local.sEmailbody.Declare
+v.Local.sEmail.Declare
+v.Local.iUsrID.Declare
+v.Local.sRecipient.Declare
+v.Local.sSender.Declare
+v.Local.sTemp.Declare
+v.Local.sTemp1.Declare
+
+f.Intrinsic.Control.If(v.Args.EmailMode,=,"ACK")
+	f.Intrinsic.Control.If(Variable.Passed.CRM-cboSRStatus,=,"In Process")
+		f.Intrinsic.String.IsInString(Variable.Passed.CRM-txtSRSubject,"CSR#",True,v.Local.bRET)
+		f.Intrinsic.Control.If(v.Local.bRET,=,False)
+			f.Intrinsic.String.Build("CSR#{0}# {1}",Variable.Passed.CRM-txtSRNo,Variable.Passed.CRM-txtSRSubject,v.Local.sSubject)
+		f.Intrinsic.Control.Else
+			v.Local.sSubject.Set(Variable.Passed.CRM-txtSRSubject)
+		f.Intrinsic.Control.Endif
+
+'		V.Local.sSql.Set("Select Email_Body  from GCG_5857_Maint ")
+'		f.ODBC.Connection!conx.Executeandreturn(v.Local.sSql,V.Local.sEmailbody)
+'		F.Intrinsic.Control.If(v.Ambient.executeandreturneof.not)
+
+'		Function.Intrinsic.Control.EndIf
+
+		f.Intrinsic.Control.If(Variable.Passed.CRM-txtSREmail.Trim,<>,"")
+			v.Local.sEmail.Set(Variable.Passed.CRM-txtSREmail)
+		f.Intrinsic.Control.Else	
+			f.Intrinsic.UI.Msgbox("Error unable to open Outlook to send email, Need a valid emailID")
+			f.Intrinsic.Control.end
+		f.Intrinsic.Control.EndIf
+		
+		f.Automation.MSOutlook.ComposeEmailHTMLModal(v.Local.sEmail,v.Local.sSubject,V.Local.sEmailbody)
+	f.Intrinsic.Control.Endif
+f.Intrinsic.Control.Else
+
+	f.Global.Security.GetUserId(v.Caller.User,v.Caller.CompanyCode,v.Local.iUsrId)
+	f.Global.Security.GetFullName(v.Caller.User,v.Local.sTemp)
+	f.Global.Security.GetUserEmail(v.Caller.User,v.Local.sTemp1)
+	f.Intrinsic.String.Build("{0}*!*{1}",v.Local.sTemp1,v.Local.sTemp,v.Local.sSender)
+
+	v.Local.sRecipient.Set(v.args.frmomemail)
+	v.Local.sSender.Set(V.DataTable.DTMaint(0).CSR_Email!FieldVal)
+'	f.Global.Messaging.QueueMessage(v.Caller.CompanyCode,v.Local.iUsrID,"GCG_5857",v.Args.Subject,v.Local.sSender,v.Local.sRecipient,V.DataTable.DTMaint(0).Email_Body!FieldValtrim)
+	
+	'Queue message erroring so replaced
+	F.Global.Messaging.CreateEMmessage(v.Local.sRecipient,"",V.Local.sSender,"",v.Args.Subject,V.DataTable.DTMaint(0).Email_Body!FieldValtrim)
+	
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.Catch
+	V.Local.sError.Declare
+	F.Intrinsic.String.Build("{0} Subroutine:{1} Error Occurred {2} with description {3}",v.Ambient.Now,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Local.sError)
+	f.Intrinsic.Control.CallSub(Error_Log,"ERRMSG",V.Local.sError)
+	f.Intrinsic.Control.EndTry
+Program.Sub.ACK_Email.End
+
+Program.Sub.Load_Maint.Start
+f.Intrinsic.Control.Try
+
+
+f.Intrinsic.Control.CallSub(CheckTable)
+
+f.data.DataTable.createfromsql("DTType","conx","Select Req_Type From CUST_SERV_REQ_TYP")
+gui.frmMaint.ddlCSRType.additems("DataTable","DTType","Req_Type","Req_Type")
+f.Data.DataTable.Close("DTType")
+
+'select GRP_ID,GRP_NAME from ATG_DOC_GRP order by GRP_ID
+f.data.DataTable.createfromsql("DTType","conx","select rtrim(GRP_NAME) as GRP_NAME from ATG_DOC_GRP order by GRP_ID")
+gui.frmMaint.ddldocType.additems("DataTable","DTType","GRP_NAME","GRP_NAME")
+f.Data.DataTable.Close("DTType")
+	
+f.Data.DataTable.CreateFromSQL("DTMaint","CONX","select *  from GCG_5857_Maint where CSR_Email<>''",True)
+f.Intrinsic.Control.If(v.DataTable.DTMaint.RowCount,>,0)
+	gui.frmMaint.txtCSREmail.text(V.DataTable.DTMaint(0).CSR_Email!Fieldval)
+	gui.frmMaint.ddlCSRType.Text(V.DataTable.DTMaint(0).CSR_Type!Fieldval)
+	gui.frmMaint.txtdocfolder.text(V.DataTable.DTMaint(0).Doc_Path!Fieldval)
+	gui.frmMaint.txtProcessed.Text(V.DataTable.DTMaint(0).Processed_Folder!Fieldval)
+	gui.frmMaint.txtEmailBody.Text(V.DataTable.DTMaint(0).Email_Body!Fieldval)
+	gui.frmMaint.txtInboxSubfolder.text(V.DataTable.DTMaint(0).Inbox_Name!Fieldval)
+	gui.frmMaint.txtCSRlogdays.Text(V.DataTable.DTMaint(0).CSR_Logdays!Fieldval)
+	gui.frmMaint.ddldocType.text(V.DataTable.DTMaint(0).Doc_Type!Fieldval)
+	gui.frmMaint.txtCust.text(V.DataTable.DTMaint(0).Cust!Fieldval)
+f.Intrinsic.Control.Else
+	f.Data.DataTable.AddRow("DTMaint","CSR_Email","","CSR_Type","","Doc_Path","","Processed_Folder","","Email_Body","","Inbox_Name","","CSR_Logdays",0,"Doc_Type","","Cust","")
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+	f.Intrinsic.Control.EndTry
+Program.Sub.Load_Maint.End
+
+Program.Sub.ErrorMsg.Start
+v.Local.sError.Declare
+Function.Intrinsic.Debug.Stop
+
+f.Intrinsic.String.Build("Project GCG_5857_CSR.g2u {0}{0}Subroutine: {1}{0}Error: {2} with Description: {3}", v.Ambient.NewLine, v.Args.CurrentSub, v.Ambient.ErrorNumber, v.Ambient.ErrorDescription, v.Local.sError)
+
+f.Intrinsic.UI.Msgbox(v.Local.sError)
+
+Program.Sub.ErrorMsg.End
+
+
+Program.Sub.Generate_NEWCSR.Start
+f.Intrinsic.Control.Try
+
+v.Local.lRet.Declare
+v.Local.sNewCSRNo.Declare
+v.Local.sDomain.Declare
+v.Local.sSQL.Declare
+v.Local.sCustomer.Declare
+v.Local.sDate.Declare
+v.Local.sCustomerName.Declare
+v.Local.sSubject.Declare
+v.Local.sRet.Declare
+v.Local.sTime.Declare
+v.Local.sContName.Declare
+v.Local.sContactPhone.Declare
+
+'find Customer
+'v.Args.frmomemail
+f.Intrinsic.String.Split(v.Args.frmomemail,"@",v.Local.sDomain)
+
+'select Cust from CONTACT where Email1 like '%gssmail.com'
+
+'Function.Intrinsic.Control.If(V.Local.sDomain(1),<>,"OOB")
+'check for valid email
+
+'	f.Intrinsic.String.Build("select Cust,Name_Customer,Name,Phone1 from CONTACT left join v_customer_Master on Cust = Customer where Email1 = '{0}'",v.Args.frmomemail,v.Local.sSQL)
+	f.Intrinsic.String.Build("select Cust,Name_Customer,Name,Phone1 from CONTACT join v_customer_Master on Cust = Customer where Email1 = '{0}'",v.Args.frmomemail,v.Local.sSQL)
+	F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst",V.Local.sSql)
+	F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,=,True)	
+		F.ODBC.conx!rst.Close
+'		f.Intrinsic.String.Build("select Cust,Name_Customer,Name,Phone1 from CONTACT left join v_customer_Master on Cust = Customer where Email1 like '%{0}'",v.Local.sDomain(1),v.Local.sSQL)
+		f.Intrinsic.String.Build("select Cust,Name_Customer,Name,Phone1 from CONTACT join v_customer_Master on Cust = Customer where Email1 like '%{0}'",v.Local.sDomain(1),v.Local.sSQL)
+		F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst",V.Local.sSql)
+		F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,=,True)	
+			'dummy customer
+			v.Local.sCustomer.Set(V.DataTable.DTMaint(0).Cust!FieldValtrim)
+			v.Local.sCustomerName.Set("Phantom MW Customer")
+		f.Intrinsic.Control.else
+			v.Local.sCustomer.Set(v.ODBC.conx!rst.FieldVal!Cust)
+			v.Local.sCustomerName.Set(v.ODBC.conx!rst.FieldVal!Name_Customer)
+			v.Local.sContName.Set(v.ODBC.conx!rst.FieldValtrim!Name)
+			v.Local.sContactPhone.Set(v.ODBC.conx!rst.FieldValtrim!Phone1)
+		f.Intrinsic.Control.EndIf
+	f.Intrinsic.Control.Else
+		v.Local.sCustomer.Set(v.ODBC.conx!rst.FieldVal!Cust)
+		v.Local.sCustomerName.Set(v.ODBC.conx!rst.FieldVal!Name_Customer)
+		v.Local.sContName.Set(v.ODBC.conx!rst.FieldValtrim!Name)
+		v.Local.sContactPhone.Set(v.ODBC.conx!rst.FieldValtrim!Phone1)
+	F.Intrinsic.Control.EndIf
+	F.ODBC.conx!rst.Close
+	Function.ODBC.Connection!Conx.GetID("CUST_SERV_REQ","Request_Number",True,v.Local.lRet)
+	
+	f.Intrinsic.String.LPad(v.Local.lRet,"0",7,v.Local.sNewCSRNo)
+	
+	v.Local.sDate.Set(v.Ambient.Date.Formatyyyymmdd)
+	v.Local.sTime.Set(v.Ambient.Time.FormatHHNNSS)
+	
+'	f.Intrinsic.String.Build("{0} CSR#{1}",v.Args.subject,v.Local.sNewCSRNo,v.Local.sSubject)
+	f.Intrinsic.String.Build("CSR#{0}# {1}",v.Local.sNewCSRNo,v.Args.subject,v.Local.sSubject)
+
+	F.Intrinsic.String.Replace(v.Local.sSubject,"'","''",v.Local.sSubject)
+	
+	f.Intrinsic.String.Build("Insert Into CUST_SERV_REQ (REQUEST_NUMBER,CUSTOMER,NAME,EMAIL,SUBJECT,REQ_TYPE,DATE_Entered,TIME_ENTERED,ENTERED_BY,Date_Last_Update,Time_Last_Update,Contact,Phone) Values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{6}','{7}','{9}','{10}')",v.Local.sNewCSRNo,v.Local.sCustomer,v.Local.sCustomerName,v.Args.frmomemail,v.Local.sSubject,v.Args.ReqType,v.Local.sDate,v.Local.sTime,v.Caller.User,v.Local.sContName,v.Local.sContactPhone,v.Local.sSQL)
+	f.ODBC.Connection!conx.execute(v.Local.sSQL)
+
+	Function.Automation.MSOutlook.GetEmailBody(v.Args.InboxFolder,v.Args.KEYID,v.Local.sRet)
+
+'	f.Intrinsic.String.Len(v.Local.sRet,v.Local.lRet)
+'	f.Intrinsic.String.Mid(v.Local.sEmailBody,1,424288,v.Local.sEmailBody)
+'	f.Intrinsic.String.Len(v.Local.sEmailBody,v.Local.lRet)
+'	32,700 characters
+'The LONG VARCHAR type allows storage of character strings with a maximum length of 32,700 characters. It is identical to VARCHAR, except that you cannot specify a maximum length when creating columns of this type.
+	f.Intrinsic.Control.Try
+'	f.Intrinsic.Control.If(v.Local.lRet,<,3200)
+		F.Intrinsic.String.Replace(v.Local.sRet,"'","''",v.Local.sRet)
+		f.Intrinsic.String.Build("{0}{1}{2}",v.Args.frmomemail,v.Ambient.NewLine,v.Local.sRet,v.Local.sRet)
+		f.Intrinsic.String.Build("{0}{1}{2}",v.Local.sSubject,v.Ambient.NewLine,v.Local.sRet,v.Local.sRet)
+		f.Intrinsic.String.Build("Insert Into CUST_SVC_RQ_NOTES Values('{0}','P','{1}','{2}','{3}','{4}')",v.Local.sNewCSRNo,v.Local.sDate,v.Local.sTime,v.Caller.User,v.Local.sRet,v.Local.sSQL)
+		f.ODBC.Connection!conx.execute(v.Local.sSQL)
+'	f.Intrinsic.Control.Else
+'		f.Intrinsic.Control.CallSub(EmailText,"Mode","WRITE","EmailBody",v.Local.sRet,"CSRNO",v.Local.sNewCSRNo)
+'	f.Intrinsic.Control.endif
+
+	f.Intrinsic.Control.Catch
+		f.Intrinsic.Control.CallSub(EmailText,"Mode","WRITE","EmailBody",v.Local.sRet,"CSRNO",v.Local.sNewCSRNo)
+'		F.Intrinsic.String.Build("{0} CSRNO:{4} Subroutine:{1} Error Occurred {2} with description {3}",v.Ambient.Now,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,v.Local.sNewCSRNo,V.Local.sError)
+'		f.Intrinsic.Control.CallSub(Error_Log,"ERRMSG",V.Local.sError)
+		F.Intrinsic.Control.ClearErrors
+		
+	f.Intrinsic.Control.EndTry
+	
+	'GetAttachments
+	f.Intrinsic.Control.CallSub(Download_Attachment,"CSRNO",v.Local.sNewCSRNo,"KEYID",v.Args.KEYID,"InboxFolder",v.Args.InboxFolder)
+	
+	Function.Intrinsic.Control.If(V.Local.sDomain(1),<>,"OOB")
+		'if not internal email
+		f.Intrinsic.Control.CallSub(ACK_Email,"EmailMode","NEW","frmomemail",v.Args.frmomemail,"Subject",v.Local.sSubject)
+	f.Intrinsic.Control.EndIf
+'f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.Catch
+V.Local.sError.Declare
+	F.Intrinsic.String.Build("{0} Subroutine:{1} Error Occurred {2} with description {3}",v.Ambient.Now,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Local.sError)
+	f.Intrinsic.Control.CallSub(Error_Log,"ERRMSG",V.Local.sError)
+	f.Intrinsic.Control.EndTry
+Program.Sub.Generate_NEWCSR.End
+Program.Sub.Download_Attachment.Start
+f.Intrinsic.Control.Try
+v.Local.iItemLinkID.Declare
+v.Local.sFilePath.Declare
+v.Local.sFileName.Declare
+v.Local.sFileType.Declare
+v.Local.sRetAttach.Declare
+v.Local.i.Declare
+V.Local.sRet.Declare
+
+
+	Function.Automation.MSOutlook.GetEmailAttachments(v.Args.InboxFolder,v.Args.KEYID,v.Local.sRetAttach) 
+	f.Intrinsic.Control.If(v.Local.sRetAttach,<>,"***NONE***")
+		Function.Automation.MSOutlook.SAVEEMAILATTACHMENTS(v.Args.InboxFolder,v.Args.KEYID,V.DataTable.DTMaint(0).Doc_Path!FieldVal)
+		
+		F.Global.DocumentControl.GetLinkID(v.Args.CSRNO,94,v.Local.iItemLinkID)
+	
+		f.Intrinsic.Control.If(v.Local.iItemLinkID,=,-1)
+			F.Global.DocumentControl.CreateReference(v.Args.CSRNO,94,v.Local.iItemLinkID)
+		F.Intrinsic.Control.Endif	
+		
+		f.Intrinsic.String.Split(v.Local.sRetAttach,"*!*",v.Local.sRetAttach)
+		f.Intrinsic.Control.For(v.Local.i,0,v.Local.sRetAttach.UBound,1)
+			v.Local.sFileName.Set(v.Local.sRetAttach(v.Local.i))
+			f.Intrinsic.String.Build("{0}{1}",V.DataTable.DTMaint(0).Doc_Path!FieldVal,v.Local.sFileName,v.Local.sFilePath)
+'			f.Intrinsic.String.Split(v.Local.sFileName,".",v.Local.sFileType)
+			Function.Intrinsic.File.GetExtensionComponent(v.Local.sFileName, v.Local.sFileType) 
+			Function.Global.DocumentControl.AddDocument(v.Local.iItemLinkID,v.Local.sFilePath,"Email Attachment",V.DataTable.DTMaint(0).GRP_ID!FieldVal,v.Local.sFileType(1)) 
+		f.Intrinsic.Control.Next(v.Local.i)
+	f.Intrinsic.Control.EndIf
+f.Intrinsic.Control.Catch
+	V.Local.sError.Declare
+	F.Intrinsic.String.Build("{0} Subroutine:{1} Error Occurred {2} with description {3}",v.Ambient.Now,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Local.sError)
+	f.Intrinsic.Control.CallSub(Error_Log,"ERRMSG",V.Local.sError)
+	f.Intrinsic.Control.EndTry
+Program.Sub.Download_Attachment.End
+
+Program.Sub.Error_Log.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+Function.Intrinsic.Debug.Stop
+
+V.Local.sFolder.Declare
+v.local.bExist.Declare
+V.Local.sFileExport.Declare
+
+	f.Intrinsic.String.Build("{0}\Custom\",v.Caller.GlobalDir,V.Local.sFolder)
+	f.Intrinsic.File.DirExists(V.Local.sFolder,v.local.bExist)
+	f.Intrinsic.Control.If(v.local.bExist,=,False)
+	    f.Intrinsic.File.CreateDir(V.Local.sFolder)
+	    f.Intrinsic.String.Build("{0}5857\",V.Local.sFolder,V.Local.sFolder)
+	    f.Intrinsic.File.CreateDir(V.Local.sFolder)
+	F.Intrinsic.Control.else
+		f.Intrinsic.String.Build("{0}5857\",V.Local.sFolder,V.Local.sFolder)
+		f.Intrinsic.File.DirExists(V.Local.sFolder,v.local.bExist)
+		f.Intrinsic.Control.If(v.local.bExist,=,False)
+	    	f.Intrinsic.File.CreateDir(V.Local.sFolder)
+	    f.Intrinsic.Control.EndIf
+	f.Intrinsic.Control.EndIf
+	
+	f.Intrinsic.String.Build("{0}GCG_5857_Errorlog.txt",V.Local.sFolder,V.Local.sFileExport)
+	f.Intrinsic.File.Exists(v.Local.sFileExport,v.Local.bExist)
+	f.Intrinsic.Control.If(v.Local.bExist,=,true)
+		f.Intrinsic.File.Append2FileNewLine(v.Local.sFileExport,v.Args.ERRMSG)
+	f.Intrinsic.Control.Else
+		f.Intrinsic.File.String2File(v.Local.sFileExport,v.Args.ERRMSG)
+	f.Intrinsic.Control.EndIf
+	f.Intrinsic.Control.End
+F.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+	f.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+
+Program.Sub.Error_Log.End
+Program.Sub.cmdOpenErrorLog_Click.Start
+F.Intrinsic.Control.Try
+v.Local.iHandle.Declare
+v.Local.sLogFile.Declare
+v.Local.bCheck.Declare
+
+
+f.Intrinsic.String.build("{0}\Custom\5857\GCG_5857_Errorlog.txt",v.Caller.GlobalDir,v.Local.sLogFile)
+f.Intrinsic.File.Exists(v.Local.sLogFile,v.Local.bCheck)
+f.Intrinsic.Control.If(v.Local.bCheck,=,true)
+	v.Local.iHandle.Set(v.Caller.Handle)
+	f.Intrinsic.Task.ShellExec(v.Caller.Handle,"Open",v.Local.sLogFile,"","",1)
+f.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+	f.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdOpenErrorLog_Click.End
+
+Program.Sub.cmdCustBrowse_Click.Start
+F.Intrinsic.Control.Try
+Variable.Local.sRet.Declare
+Function.Intrinsic.UI.Browser(205,"",Variable.Local.sRet)
+
+f.Intrinsic.String.Split(Variable.Local.sRet,"*!*",Variable.Local.sRet)
+gui.frmMaint.txtCust.Text(Variable.Local.sRet(0).trim)
+
+F.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+	f.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdCustBrowse_Click.End
+
+Program.Sub.isRunning.Start
+f.Intrinsic.Control.Try
+v.Local.sFile.Declare(String)
+v.Local.bCheck.Declare(Boolean)
+v.Local.bCheck2.Declare(Boolean)
+v.Local.sPID.Declare(String)
+v.Local.iRet.Declare(Long)
+v.Local.dFileDate.Declare(Date)
+v.Local.bRet.Declare
+
+
+    'track PID and write file to let async program know its running
+    f.Intrinsic.String.Build("{0}\{1}{2}isrunning.txt",v.Caller.FilesDir,v.Caller.Terminal,v.Caller.CompanyCode,v.Local.sFile)
+    v.Global.sPIDFile.Set(v.Local.sFile)
+    f.Intrinsic.File.Exists(v.Local.sFile,v.Local.bCheck)
+    f.Intrinsic.Control.If(v.local.bCheck,=,True)
+        f.Intrinsic.File.GetFileDateTime(v.Local.sfile,v.Local.dFileDate)
+        f.Intrinsic.Date.DateDiff("N",v.Local.dFileDate,v.Ambient.Now,v.Local.iRet)
+        'set file threshold to 5 minutes, since we are limiting to 10 records at a time.
+        f.Intrinsic.Control.If(v.Local.iRet,>,5)
+            'terminate if hung up - this is happening on SOAP POSTS
+            f.Intrinsic.File.File2String(v.Local.sFile,v.Local.sPID)
+			f.Intrinsic.Task.PIDRunning(v.Local.sPID.Long,v.Local.bRet)
+			f.Intrinsic.Control.If(v.Local.bRet)
+            	f.Intrinsic.Task.TerminatePID(v.Local.sPID.Long)
+            f.Intrinsic.Control.endif
+            f.Intrinsic.File.DeleteFile(v.Local.sFile)
+        f.Intrinsic.Control.EndIf
+        'end if program is still running an the isrunning file is not older than the threshold set above.
+        f.Intrinsic.Control.End
+    f.Intrinsic.Control.Else
+        'write file for check every time 38120 hook fires on the OLU set interval
+        f.Intrinsic.File.String2File(v.Local.sFile,v.Ambient.PID)   
+    f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.Catch
+	V.Local.sError.Declare
+	F.Intrinsic.String.Build("{0} Subroutine:{1} Error Occurred {2} with description {3}",v.Ambient.Now,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Local.sError)
+	f.Intrinsic.Control.CallSub(Error_Log,"ERRMSG",V.Local.sError)
+	f.Intrinsic.Control.EndTry
+Program.Sub.isRunning.End
+
+Program.Sub.cmdInbox_Browse_Click.Start
+F.Intrinsic.Control.Try
+v.Local.sRet.Declare
+
+	Function.Automation.MSOutlook.FolderPathPicker(v.Local.sRet)
+	gui.frmMaint.txtInboxSubfolder.Text(v.Local.sRet)
+
+F.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+	f.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdInbox_Browse_Click.End
+
+Program.Sub.cmdPrcessed_Browse_Click.Start
+F.Intrinsic.Control.Try
+v.Local.sRet.Declare
+	Function.Automation.MSOutlook.FolderPathPicker(v.Local.sRet)
+	gui.frmMaint.txtProcessed.Text(v.Local.sRet)
+F.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+	f.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdPrcessed_Browse_Click.End
+Program.Sub.LoadServiceRequest.Start
+F.Intrinsic.Control.Try
+
+v.Local.sSql.Declare
+
+'
+F.ODBC.Connection!conx.OpenCompanyConnection(300)
+
+'f.Intrinsic.String.Build("select v_CUST_SVC_RQ_NOTES.date as 'Action Date',v_CUST_SVC_RQ_NOTES.text as 'Notes'  from v_CUST_SVC_RQ_NOTES where csr_number = '{0}' and  type_cd = 'N' order by date desc",Variable.Passed.CRM-txtSRNo.Trim,V.Local.sSql)
+f.Intrinsic.String.Build("select concat(concat(date, ' '), time) as 'Action Date',v_CUST_SVC_RQ_NOTES.text as 'Notes'  from v_CUST_SVC_RQ_NOTES where csr_number = '{0}' order by date desc,time desc",Variable.Passed.CRM-txtSRNo.Trim,V.Local.sSql)
+
+F.Data.DataTable.CreateFromSQL("DTHook","Conx",v.Local.sSql,True)
+F.Data.DataView.Create("DTHook","DVHook")
+
+	f.Data.Datatable.AddColumn("DTHook","Select","Bit","1")
+
+	gui.frmSRV.GsGrid.AddGridViewFromDataView("GVHook","DTHook","DVHook")
+
+	gui.frmSRV.GsGrid.SetColumnProperty("GVHook","Select","HeaderFontBold","True")
+	gui.frmSRV.GsGrid.SetColumnProperty("GVHook","Action Date","HeaderFontBold","True")
+	gui.frmSRV.GsGrid.SetColumnProperty("GVHook","Notes","HeaderFontBold","True")
+	
+	gui.frmSRV.GsGrid.SetColumnProperty("GVHook","Select","HeaderBackColor","#d3d3d3")
+	gui.frmSRV.GsGrid.SetColumnProperty("GVHook","Action Date","HeaderBackColor","#d3d3d3")
+	gui.frmSRV.GsGrid.SetColumnProperty("GVHook","Notes","HeaderBackColor","#d3d3d3")
+
+	gui.frmSRV.GsGrid.SetColumnProperty("GVHook","Action Date","AllowEdit",False)
+	gui.frmSRV.GsGrid.SetColumnProperty("GVHook","Action Date","ReadOnly",True)
+	
+	gui.frmSRV.GsGrid.SetColumnProperty("GVHook","Notes","AllowEdit",False)
+	gui.frmSRV.GsGrid.SetColumnProperty("GVHook","Notes","ReadOnly",True)
+	
+	gui.frmSRV.GsGrid.SetColumnProperty("GVHook","Select","AllowEdit",True)
+	gui.frmSRV.GsGrid.SetColumnProperty("GVHook","Select","ReadOnly",False)
+'	
+	gui.frmSRV.GsGrid.SetColumnProperty("GVHook","Select","MinWidth",60)
+	gui.frmSRV.GsGrid.SetColumnProperty("GVHook","Select","MaxWidth",60)
+	gui.frmSRV.GsGrid.SetColumnProperty("GVHook","Action Date","MinWidth",120)
+	gui.frmSRV.GsGrid.SetColumnProperty("GVHook","Action Date","MaxWidth",120)
+	
+	gui.frmSRV.GsGrid.SetColumnProperty("GVHook", "Notes", "CellWordWrap", "Wrap")
+	gui.frmSRV.GsGrid.SetGridViewProperty("GVHook", "OptionsViewRowAutoHeight", "True")
+'	gui.frmSRV.GsGrid.SetGridViewProperty("GVHook", "ColumnPanelRowHeight", "40")
+
+'	gui.frmMaint.GsGridMaint.SetColumnProperty("GVHook","Dept","Caption","Dept")
+'	gui.frmMaint.GsGridMaint.SetColumnProperty("GVHook","Day","Caption","Day")
+'	gui.frmMaint.GsGridMaint.SetColumnProperty("GVHook","Start_Time","Caption","Start Time")
+'	
+
+	Function.Data.DataTable.SetValueFormat("DTHook",-1,"Action Date","Action Date","MM/DD/YYYY HH:NN:SS")
+
+	gui.frmSRV.GsGrid.SetGridViewProperty("GVHook", "OptionsSelectionEnableAppearanceFocusedRow", "False") 
+
+	gui.frmSRV.GsGrid.SetColumnProperty("GVHook", "Action Date", "DisplayCustomDatetime", "d")
+	gui.frmSRV.GsGrid.MainView("GVHook")
+
+
+	f.ODBC.Connection!conx.Close
+
+F.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+F.Intrinsic.Control.EndTry
+Program.Sub.LoadServiceRequest.End
+
+Program.Sub.frmSRV_UnLoad.Start
+F.Data.DataView.close("DTHook","DVHook")
+F.Data.DataTable.close("DTHook")
+
+f.Intrinsic.Control.End
+Program.Sub.frmSRV_UnLoad.End
+
+Program.Sub.cmdclipboard_Click.Start
+F.Intrinsic.Control.Try
+v.Local.sRet.Declare
+v.Local.sText.Declare
+
+f.Intrinsic.String.Build("{0}*****************************************{0}",v.Ambient.NewLine,v.Local.sText)
+f.Data.DataView.SetFilter("DTHook","DVHook","Select=1")
+f.Intrinsic.Control.If(v.Dataview.DTHook!DVHook.RowCount,>,0)
+	f.Data.DataView.ToString("DTHook","DVHook","Action Date*!*Notes",", ",v.Local.sText,v.Local.sRet)
+	f.Data.DataView.SetFilter("DTHook","DVHook","")
+	
+	f.Intrinsic.String.Replace(v.Local.sRet," 12:00:00 AM","",v.Local.sRet)
+	f.Intrinsic.UI.SetClipboardText(v.Local.sRet)
+'	f.Intrinsic.UI.GetClipboardText(v.Local.sRet)
+f.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdclipboard_Click.End
+
+Program.Sub.cmdEmail_Click.Start
+F.Intrinsic.Control.Try
+v.Local.sRet.Declare
+v.Local.sEmail.Declare
+v.Local.sSubject.Declare
+v.Local.sBody.Declare
+v.Local.BRet.Declare
+
+
+f.Intrinsic.Control.BlockEvents 
+v.Local.sEmail.Set(Variable.Passed.CRM-txtSREmail)
+'v.Local.sEmail.Set("rnair@gssmail.com")
+f.Intrinsic.Control.If(v.Local.sEmail,=,"")
+	f.Intrinsic.UI.Msgbox("To EmailId not vaild")
+f.Intrinsic.Control.else
+
+	f.Intrinsic.UI.InvokeWaitDialog("Opening Outlook")
+	f.Data.DataView.SetFilter("DTHook","DVHook","Select=1")
+	f.Intrinsic.Control.If(v.Dataview.DTHook!DVHook.RowCount,>,0)
+		f.Data.DataView.ToString("DTHook","DVHook","Action Date*!*Notes",", ","<br />*****************************************<br />",v.Local.sRet)
+		
+		f.Intrinsic.String.Replace(v.Local.sRet,v.Ambient.NewLine,"<br />",v.Local.sRet)
+		
+		f.Intrinsic.String.Replace(v.Local.sRet," 12:00:00 AM","",v.Local.sRet)
+		f.Intrinsic.String.Build("<br/><br/>{0}",v.Local.sRet,v.Local.sBody)
+		
+		f.Data.DataView.SetFilter("DTHook","DVHook","")
+		f.Intrinsic.String.IsInString(Variable.Passed.CRM-txtSRSubject,"CSR#",True,v.Local.BRet)
+		f.Intrinsic.Control.If(v.Local.BRet,=,False)
+'		f.Intrinsic.String.Build("{0} CSR#{1}",Variable.Passed.CRM-txtSRSubject,Variable.Passed.CRM-txtSRNo,v.Local.sSubject)
+			f.Intrinsic.String.Build("CSR#{0}# {1}",Variable.Passed.CRM-txtSRNo,Variable.Passed.CRM-txtSRSubject,v.Local.sSubject)
+		f.Intrinsic.Control.Else
+			v.Local.sSubject.Set(Variable.Passed.CRM-txtSRSubject)
+		f.Intrinsic.Control.EndIf
+		f.Intrinsic.UI.CloseWaitDialog
+		f.Automation.MSOutlook.ComposeEmailHTMLModal(v.Local.sEmail,v.Local.sSubject,v.Local.sBody)
+	f.Intrinsic.Control.EndIf 
+f.Intrinsic.Control.EndIf
+f.Intrinsic.UI.CloseWaitDialog
+f.Intrinsic.Control.UNBlockEvents
+F.Intrinsic.Control.Catch
+	f.Intrinsic.UI.CloseWaitDialog
+	f.Intrinsic.Control.UNBlockEvents 
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdEmail_Click.End
+
+Program.Sub.CheckTable.Start
+f.Intrinsic.Control.Try
+V.Local.bExists.Declare
+
+V.Local.sSQL.Declare
+
+F.ODBC.Connection!conx.TableExists("GCG_5857_Maint",V.Local.bExists)
+F.Intrinsic.Control.If(V.Local.bExists,=,False)
+	V.Local.sSQL.Set("CREATE TABLE GCG_5857_Maint (Inbox_Name VARCHAR(200),CSR_Email VARCHAR(50),CSR_Type VARCHAR(30),Processed_Folder VARCHAR(200),CSR_Logdays SMALLINT,Doc_Path VARCHAR(200),Doc_Type VARCHAR(30),Email_Body LONGVARCHAR,Cust VARCHAR(6) )")
+	F.ODBC.Connection!conx.Execute(V.Local.sSQL)
+F.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.Catch
+	V.Local.sError.Declare
+	F.Intrinsic.String.Build("{0} Subroutine:{1} Error Occurred {2} with description {3}",v.Ambient.Now,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Local.sError)
+	f.Intrinsic.Control.CallSub(Error_Log,"ERRMSG",V.Local.sError)
+	f.Intrinsic.Control.EndTry
+Program.Sub.CheckTable.End
+
+Program.Sub.EmailText.Start
+f.Intrinsic.Control.Try
+
+V.Local.sFolder.Declare
+v.local.bExist.Declare
+V.Local.sFileExport.Declare
+v.Local.sEmailBody.Declare
+V.Local.iHandle.Declare
+v.Local.sSQL.Declare
+
+
+'	f.Intrinsic.Control.If(v.Args.Mode,=,"READ")
+'		F.ODBC.Connection!conx.OpenCompanyConnection(300)
+'		f.Intrinsic.String.Build("select Text from CUST_SVC_RQ_NOTES  where CSR_Number = '{0}' and Type_CD = 'P'",v.Args.CSRNO,v.Local.sSQL)
+'		F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst",V.Local.sSql)
+'		F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,=,False)	
+'			F.Intrinsic.Control.If(v.ODBC.conx!rst.FieldVal!Text,<>,"<LONG EMAIL>")	
+'				F.ODBC.conx!rst.Close
+'				f.Intrinsic.Control.ExitSub
+'			F.Intrinsic.Control.EndIf
+'		F.Intrinsic.Control.EndIf
+'		F.ODBC.conx!rst.Close
+'	f.Intrinsic.Control.EndIf
+	
+	f.Intrinsic.String.Build("{0}\Custom\",v.Caller.GlobalDir,V.Local.sFolder)
+	f.Intrinsic.File.DirExists(V.Local.sFolder,v.local.bExist)
+	f.Intrinsic.Control.If(v.local.bExist,=,False)
+	    f.Intrinsic.File.CreateDir(V.Local.sFolder)
+	    f.Intrinsic.String.Build("{0}5857\",V.Local.sFolder,V.Local.sFolder)
+	    f.Intrinsic.File.CreateDir(V.Local.sFolder)
+	    f.Intrinsic.String.Build("{0}5857\BODY\",V.Local.sFolder,V.Local.sFolder)
+	    f.Intrinsic.File.CreateDir(V.Local.sFolder)
+	F.Intrinsic.Control.else
+		f.Intrinsic.String.Build("{0}5857\",V.Local.sFolder,V.Local.sFolder)
+		f.Intrinsic.File.DirExists(V.Local.sFolder,v.local.bExist)
+		f.Intrinsic.Control.If(v.local.bExist,=,False)
+	    	f.Intrinsic.File.CreateDir(V.Local.sFolder)
+	    	f.Intrinsic.String.Build("{0}5857\BODY\",V.Local.sFolder,V.Local.sFolder)
+	    	f.Intrinsic.File.CreateDir(V.Local.sFolder)
+	    F.Intrinsic.Control.else
+	    	f.Intrinsic.String.Build("{0}BODY\",V.Local.sFolder,V.Local.sFolder)
+			f.Intrinsic.File.DirExists(V.Local.sFolder,v.local.bExist)
+			f.Intrinsic.Control.If(v.local.bExist,=,False)
+		    	f.Intrinsic.File.CreateDir(V.Local.sFolder)
+	    	f.Intrinsic.Control.EndIf
+	    f.Intrinsic.Control.EndIf
+	f.Intrinsic.Control.EndIf
+	
+	
+	
+	f.Intrinsic.Control.If(v.Args.Mode,=,"WRITE")
+		f.Intrinsic.String.Build("{0}{1}.txt",V.Local.sFolder,v.Args.CSRNO,V.Local.sFolder)
+		f.Intrinsic.File.String2File(v.Local.sFolder,v.Args.EmailBody)
+		F.Intrinsic.Control.ClearErrors
+	f.Intrinsic.Control.ElseIf(v.Args.Mode,=,"READ")
+		f.Intrinsic.String.Build("{0}{1}.txt",V.Local.sFolder,v.Args.CSRNO,V.Local.sFolder)
+		f.Intrinsic.File.Exists(V.Local.sFolder,v.local.bExist)
+		f.Intrinsic.Control.If(v.local.bExist)
+			f.Intrinsic.File.File2String(v.Local.sFolder,v.Local.sEmailBody)
+''			F.Intrinsic.File.GetHandle(V.Local.iHandle)
+''			F.Intrinsic.File.OpenForRead(V.Local.sFolder,V.Local.iHandle)
+''			F.Intrinsic.File.ReadFile(V.Local.iHandle,V.Local.sEmailBody)
+
+'			Variable.Passed.CRM-txtSRProblem.Set(v.Local.sEmailBody)
+'			v.Local.sEmailBody.Set(Variable.Passed.CRM-txtSRProblem)
+''			f.Intrinsic.String.Replace(v.Local.sEmailBody,"<CRLF>",v.Ambient.NewLine,v.Local.sEmailBody)
+'			f.Intrinsic.String.Replace(v.Local.sEmailBody,v.Ambient.NewLine,v.Ambient.Tab,v.Local.sEmailBody)
+''			f.Intrinsic.String.Replace(v.Local.sEmailBody,"CHR(13)",v.Ambient.NewLine,v.Local.sEmailBody)
+			Variable.Passed.CRM-txtSRProblem.Set(v.Local.sEmailBody)
+		f.Intrinsic.Control.EndIf
+	f.Intrinsic.Control.ElseIf(v.Args.Mode,=,"SAVE")
+		f.Intrinsic.String.Build("{0}{1}.txt",V.Local.sFolder,v.Args.CSRNO,V.Local.sFolder)
+		v.Local.sEmailBody.Set(Variable.Passed.CRM-txtSRProblem)
+		f.Intrinsic.String.Replace(v.Local.sEmailBody,"<CRLF>",v.Ambient.NewLine,v.Local.sEmailBody)
+		f.Intrinsic.File.String2File(v.Local.sFolder,v.Local.sEmailBody)
+	f.Intrinsic.Control.endif
+
+	F.Intrinsic.String.Build("{0} Subroutine:{1} Error Occurred {2} with description {3}",v.Ambient.Now,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Local.sError)
+f.Intrinsic.Control.Catch
+	V.Local.sError.Declare
+	f.Intrinsic.Control.CallSub(Error_Log,"ERRMSG",V.Local.sError)
+	f.Intrinsic.Control.EndTry
+Program.Sub.EmailText.End
+
+Program.Sub.Comments.Start
+${$5$}$2.0.0.0$}$2
+${$6$}$rnair$}$20210113143601787$}$JUGEdtlNdgRUPvge2DQ26bz/1piQWHOnyfWMKZ60B31aZOYEycjYi+DfY271t74XGyW2Z6rb82s=
+Program.Sub.Comments.End
